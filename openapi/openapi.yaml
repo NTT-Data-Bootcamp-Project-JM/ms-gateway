@@ -1,0 +1,630 @@
+openapi: 3.1.0
+info:
+  title: API gateway
+  description: Single entry point. Login and registration are public. Every other
+    /api route requires a bearer token and is forwarded through Eureka.
+  version: 1.0.0
+servers:
+- url: http://127.0.0.1:8080
+  description: Generated server url
+paths:
+  /api/v1/auth/{path}:
+    get:
+      summary: Forwarded to ms-auth
+      description: The gateway proxies this call to ms-auth through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+    put:
+      summary: Forwarded to ms-auth
+      description: The gateway proxies this call to ms-auth through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+    post:
+      summary: Forwarded to ms-auth
+      description: The gateway proxies this call to ms-auth through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+    delete:
+      summary: Forwarded to ms-auth
+      description: The gateway proxies this call to ms-auth through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+    patch:
+      summary: Forwarded to ms-auth
+      description: The gateway proxies this call to ms-auth through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+    parameters:
+    - name: path
+      in: path
+      description: Remainder of the downstream path
+      required: true
+      schema:
+        type: string
+  /api/v1/customers/{path}:
+    get:
+      summary: Forwarded to ms-customer
+      description: The gateway proxies this call to ms-customer through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    put:
+      summary: Forwarded to ms-customer
+      description: The gateway proxies this call to ms-customer through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    post:
+      summary: Forwarded to ms-customer
+      description: The gateway proxies this call to ms-customer through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    delete:
+      summary: Forwarded to ms-customer
+      description: The gateway proxies this call to ms-customer through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    patch:
+      summary: Forwarded to ms-customer
+      description: The gateway proxies this call to ms-customer through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    parameters:
+    - name: path
+      in: path
+      description: Remainder of the downstream path
+      required: true
+      schema:
+        type: string
+  /api/v1/accounts/{path}:
+    get:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    put:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    post:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    delete:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    patch:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    parameters:
+    - name: path
+      in: path
+      description: Remainder of the downstream path
+      required: true
+      schema:
+        type: string
+  /api/v1/movements/{path}:
+    get:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    put:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    post:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    delete:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    patch:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    parameters:
+    - name: path
+      in: path
+      description: Remainder of the downstream path
+      required: true
+      schema:
+        type: string
+  /api/v1/transfers/{path}:
+    get:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    put:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    post:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    delete:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    patch:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    parameters:
+    - name: path
+      in: path
+      description: Remainder of the downstream path
+      required: true
+      schema:
+        type: string
+  /api/v1/debit-cards/{path}:
+    get:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    put:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    post:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    delete:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    patch:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    parameters:
+    - name: path
+      in: path
+      description: Remainder of the downstream path
+      required: true
+      schema:
+        type: string
+  /api/v1/account-reports/{path}:
+    get:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    put:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    post:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    delete:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    patch:
+      summary: Forwarded to ms-account
+      description: The gateway proxies this call to ms-account through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    parameters:
+    - name: path
+      in: path
+      description: Remainder of the downstream path
+      required: true
+      schema:
+        type: string
+  /api/v1/loans/{path}:
+    get:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    put:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    post:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    delete:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    patch:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    parameters:
+    - name: path
+      in: path
+      description: Remainder of the downstream path
+      required: true
+      schema:
+        type: string
+  /api/v1/credit-cards/{path}:
+    get:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    put:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    post:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    delete:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    patch:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    parameters:
+    - name: path
+      in: path
+      description: Remainder of the downstream path
+      required: true
+      schema:
+        type: string
+  /api/v1/credit-movements/{path}:
+    get:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    put:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    post:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    delete:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    patch:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    parameters:
+    - name: path
+      in: path
+      description: Remainder of the downstream path
+      required: true
+      schema:
+        type: string
+  /api/v1/debt-status/{path}:
+    get:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    put:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    post:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    delete:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    patch:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    parameters:
+    - name: path
+      in: path
+      description: Remainder of the downstream path
+      required: true
+      schema:
+        type: string
+  /api/v1/credit-reports/{path}:
+    get:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    put:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    post:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    delete:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    patch:
+      summary: Forwarded to ms-credit
+      description: The gateway proxies this call to ms-credit through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    parameters:
+    - name: path
+      in: path
+      description: Remainder of the downstream path
+      required: true
+      schema:
+        type: string
+  /api/v1/wallets/{path}:
+    get:
+      summary: Forwarded to ms-yanki
+      description: The gateway proxies this call to ms-yanki through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    put:
+      summary: Forwarded to ms-yanki
+      description: The gateway proxies this call to ms-yanki through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    post:
+      summary: Forwarded to ms-yanki
+      description: The gateway proxies this call to ms-yanki through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    delete:
+      summary: Forwarded to ms-yanki
+      description: The gateway proxies this call to ms-yanki through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    patch:
+      summary: Forwarded to ms-yanki
+      description: The gateway proxies this call to ms-yanki through Eureka.
+      responses:
+        "200":
+          description: Downstream response
+      security:
+      - bearer-jwt: []
+    parameters:
+    - name: path
+      in: path
+      description: Remainder of the downstream path
+      required: true
+      schema:
+        type: string
+components:
+  securitySchemes:
+    bearer-jwt:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

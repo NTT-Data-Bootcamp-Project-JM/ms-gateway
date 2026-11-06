@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 /**
- * Rejects calls that do not carry a valid JWT, except login, registration, and health.
+ * Rejects calls that do not carry a valid JWT, except login, registration, health, and Swagger.
  */
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
@@ -67,6 +67,8 @@ public class JwtGatewayFilter extends OncePerRequestFilter {
         String path = request.getRequestURI();
         return path.startsWith("/api/v1/auth/")
                 || path.startsWith("/actuator/")
+                || path.startsWith("/v3/api-docs")
+                || path.startsWith("/swagger-ui")
                 || "OPTIONS".equalsIgnoreCase(request.getMethod());
     }
 
