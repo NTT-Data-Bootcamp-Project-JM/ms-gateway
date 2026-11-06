@@ -1,0 +1,75 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ms-gateway
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: auth
+            uri: lb://ms-auth
+            predicates:
+              - Path=/api/v1/auth/**
+          - id: customers
+            uri: lb://ms-customer
+            predicates:
+              - Path=/api/v1/customers/**
+          - id: accounts
+            uri: lb://ms-account
+            predicates:
+              - Path=/api/v1/accounts/**
+          - id: movements
+            uri: lb://ms-account
+            predicates:
+              - Path=/api/v1/movements/**
+          - id: transfers
+            uri: lb://ms-account
+            predicates:
+              - Path=/api/v1/transfers/**
+          - id: debit-cards
+            uri: lb://ms-account
+            predicates:
+              - Path=/api/v1/debit-cards/**
+          - id: account-reports
+            uri: lb://ms-account
+            predicates:
+              - Path=/api/v1/account-reports/**
+          - id: loans
+            uri: lb://ms-credit
+            predicates:
+              - Path=/api/v1/loans/**
+          - id: credit-cards
+            uri: lb://ms-credit
+            predicates:
+              - Path=/api/v1/credit-cards/**
+          - id: credit-movements
+            uri: lb://ms-credit
+            predicates:
+              - Path=/api/v1/credit-movements/**
+          - id: debt-status
+            uri: lb://ms-credit
+            predicates:
+              - Path=/api/v1/debt-status/**
+          - id: credit-reports
+            uri: lb://ms-credit
+            predicates:
+              - Path=/api/v1/credit-reports/**
+          - id: wallets
+            uri: lb://ms-yanki
+            predicates:
+              - Path=/api/v1/wallets/**
+
+bank:
+  security:
+    jwt-secret: bank-bootcamp-demo-secret-change-me
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
