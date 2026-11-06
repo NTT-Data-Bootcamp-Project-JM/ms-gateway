@@ -62,21 +62,3 @@ spring:
             uri: lb://ms-yanki
             predicates:
               - Path=/api/v1/wallets/**
-
-bank:
-  security:
-    jwt-secret: bank-bootcamp-demo-secret-change-me
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-  instance:
-    prefer-ip-address: true
-
-springdoc:
-  api-docs:
-    enabled: false
-  swagger-ui:
-    url: /openapi.yaml
-    disable-swagger-default-url: true
