@@ -76,4 +76,7 @@ eureka:
 
 springdoc:
   api-docs:
-    path: /v3/api-docs
+    enabled: false
+  swagger-ui:
+    url: /openapi.yaml
+    disable-swagger-default-url: true
